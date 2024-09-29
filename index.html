@@ -21,11 +21,28 @@
         <p class="card-text">
             This software has been designed to aid surveyors in compiling JRJ files with ease.
             <br>
-            Reffer to <a href="https://www.youtube.com/playlist?list=PLDnHZzGapY_OTWbyW4BJBIEbVNCuM3vv7&jct=kT2oZVHRmdIDYVveqfzlDA">Youtube</a> 
+            Reffer to <a href="https://www.youtube.com/playlist?list=PL3KDBzDni7t9zqE64-wOSq1KKsYqOZVuz">Youtube</a> 
             for more help
         </p>
-        <a href="CADastra.msi"  class="btn btn-primary">Download</a>
+        <button onclick="countDownloads()">
+            Hello
+        </button>
+        <a href="CADastra.msi" class="btn btn-primary">Download</a>
       </div>
     </div>
+
+
+    <script>
+      function countDownloads(){
+		const fs = require('fs');
+		
+		fs.readFile('downloads.txt', (err, data) => {
+			if (err) throw err;
+
+			alert(data.toString());
+		});
+        alert("Hello world");
+    }
+    </script>
   </body>
 </html>
