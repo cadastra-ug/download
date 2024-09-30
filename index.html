@@ -17,32 +17,190 @@
     <div class="card">
       <div class="card-header">Get CADastra</div>
       <div class="card-body">
-        <h5 class="card-title">Version: <span  id="versionSpan">2.0</span></h5>
         <p class="card-text">
-            This software has been designed to aid surveyors in compiling JRJ files with ease.
+            This software has been designed as a freeware to aid surveyors in compiling JRJ files with ease.
             <br>
-            Reffer to <a href="https://www.youtube.com/playlist?list=PL3KDBzDni7t9zqE64-wOSq1KKsYqOZVuz">Youtube</a> 
-            for more help
+			Here are some features that have been included;
+			<br>
+			<ul>
+				<li>Custom file extension, easy to use and share</li>
+				<li>Nice and easy user interface</li>
+				<li>Plots Index and working Diagrams</li>
+				<li>Export index diagram in google earth</li>
+				<li>Export entire JRJ in one PDF file</li>
+        		<li>Auto-compile: Computes entire JRJ with no adjustments needed</li>
+				<li>Dymanic: Supports over 1,000 stations and over 500 parcels</li>
+				<li>Free and easy Coordinate Conversion Software</li>
+				<li>Quick data Extraction: Quickly extract data from AutoCAD</li>
+				<li>Saves your Computational time by 60%</li>
+				<li>Inset Management: Manage parcels enclosed in other parcels</li>
+				<li>Added all districts in index Computations</li>
+				<li>Added alternative units(feet) to index diagram</li>
+				<li>And many many more. Tryout</li>
+			</ul>
+
+
+            For detailed video tutorials and refferences go to <a href="https://www.youtube.com/playlist?list=PL3KDBzDni7t9zqE64-wOSq1KKsYqOZVuz">Youtube</a> 
+            for more help <br>
+
         </p>
-        <button onclick="countDownloads()">
-            Hello
+        <h5 class="card-title">Version: <span  id="versionSpan">2.0</span></h5>
+		<button onclick="downloadFile()" class="btn btn-primary">
+            Download
         </button>
-        <a href="CADastra.msi" class="btn btn-primary">Download</a>
+		
+        <a id="downloadBtn" href="CADastra.msi" onclick="downloadFile()" style="display: none;">Download</a>
+		<div id="countdownDiv" style="font-size:small;display:none;">...Downloads</div><br>
+		For feedback you can <a href="mailto:tsebz07@gmail.com">email: tsebz07@gmail.com </a> or contact +256781 989621
+		<br><br>
+		<h5 class="card-title">Screenshots</span></h5>
+
       </div>
     </div>
 
+	<!-- THIS IS AAN IMAGE CARD -->
+
+
+	<div class="row row-cols-1 row-cols-md-2 g-4">
+
+		<div class="col">
+			<div class="card">
+			  <img src="gifAll.gif" class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="card-title">Overview</h5>
+				<p class="card-text">Overview of how the software works.</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
+			  <img src="gifTrigger.gif" class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="card-title">Trigger Function</h5>
+				<p class="card-text">Quickly extract cordinates from AutoCAD.</p>
+			  </div>
+			</div>
+		</div>
+
+		<div class="col">
+		  <div class="card">
+			<img src="imgHome.png" class="card-img-top" alt="CADastra Home page">
+			<div class="card-body">
+			  <h5 class="card-title">Input Home page</h5>
+			  <p class="card-text">This is a dynamic input home page, you fill in the required data will have the JRJ Auto-compiled.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col">
+		  <div class="card">
+			<img src="imgExport.png" class="card-img-top" alt="...">
+			<div class="card-body">
+			  <h5 class="card-title">Export Window</h5>
+			  <p class="card-text">Various ways to export your JRJ. To one single PDF, multiple files, to Google Earth or to CSV</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col">
+		  <div class="card">
+			<img src="imgIDD.png" class="card-img-top" alt="...">
+			<div class="card-body">
+			  <h5 class="card-title">Index Diagram </h5>
+			  <p class="card-text">A responsive and configurable Index digram will help you save time.</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col">
+		  <div class="card">
+			<img src="imgPcls.png" class="card-img-top" alt="...">
+			<div class="card-body">
+			  <h5 class="card-title">Parcels Page</h5>
+			  <p class="card-text">This is a another input page used to specify the number of parcels in your work. You can also setup the insets to atomatically adjust the area</p>
+			</div>
+		  </div>
+		</div>
+		<div class="col">
+			<div class="card">
+			  <img src="imgCoordTrans.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="card-title">Coordinate Transformation Software</h5>
+				<p class="card-text">Free and easy to use with option to import a file.</p>
+			  </div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
+			  <img src="imgCadastra.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="card-title">CADastra Home Page</h5>
+				<p class="card-text">This is a landing page with the history of your recent files.</p>
+			  </div>
+			</div>
+		  </div>
+		<div class="col">
+			<div class="card">
+			  <img src="imgBackstage1.png" class="card-img-top" alt="...">
+			  <div class="card-body">
+				<h5 class="card-title">Back Stage</h5>
+				<p class="card-text">Quickly access features and browse the file summary.</p>
+			  </div>
+			</div>
+		</div>
+
+	  </div>
+
+
+
+
+	<!-- END OF IMAGE CARD -->
 
     <script>
-      function countDownloads(){
-		const fs = require('fs');
-		
-		fs.readFile('downloads.txt', (err, data) => {
-			if (err) throw err;
+        //let address='http://localhost/website/downloads.php?downloads=521';
+		let address='http://cadastra.rf.gd/downloads.php';
+		function fetchDownloads() {
+			//http://cadastra.rf.gd/downloads.php
 
-			alert(data.toString());
-		});
-        alert("Hello world");
-    }
+			fetch(address)
+                .then(response => response.json()) // Parse the JSON response
+                .then(data => {
+                  document.getElementById('countdownDiv').innerText = data.response +" Downloads";
+                })
+                .catch(error => {
+                    console.error('Error fetching the data:', error);
+                });
+        }
+
+        window.onload = function() {
+            fetchDownloads();
+        };
+
+
+        function downloadFile(){
+
+			//UPDATE THE DOWNLOADS
+            const data = {count: "",};
+            fetch(address, {
+                method: 'POST', 
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+				mode:"no-cors",
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+			document.getElementById('downloadBtn').click();
+        }
+
     </script>
   </body>
 </html>
